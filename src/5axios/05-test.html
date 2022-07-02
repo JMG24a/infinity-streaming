@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>FavoritesCat</title>
+</head>
+<body>
+    <h1>FavoritesCat</h1>
+
+    <section class="container-form">
+        <h2>Up a picture</h2>
+        <form class="formCat" id="formCat">
+            <div class="uploadPhoto">
+                <img id="uploadCat" class="image_favorite">
+            </div>
+            <input type="file" id="file" name="file"/>
+            <button type="button" onclick="uploadCatPicture()">upload</button>
+        </form>
+    </section>
+
+    <section class="section-favorites">
+        <h2>your favorites</h2>
+        <article id="yourFavorite" class="container-favorites">
+            
+        </article>
+    </section>
+
+    <span id="error"></span>
+    <section id="init" class="container">
+
+    </section>
+    <button id="reload" class="reload">
+        Reload
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./05-test.js"></script>
+</body>
+</html>
