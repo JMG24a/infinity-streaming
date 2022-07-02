@@ -1,7 +1,6 @@
 const instance = axios.create({
     baseURL: 'https://api.thecatapi.com/v1'
 })
-const key ='db0420ba-17c8-430c-9d3c-4f54eb338543';
 instance.defaults.headers.common['X-API-KEY'] = `${key}`
 
 const formCat = document.getElementById('formCat')

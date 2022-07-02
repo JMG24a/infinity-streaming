@@ -2,8 +2,6 @@ const button = document.getElementById('reload');
 const favorite = document.getElementsByClassName('favorite');
 const span = document.getElementById('error');
 
-const key = 'db0420ba-17c8-430c-9d3c-4f54eb338543'
-
 button.addEventListener('click', function(){
     getImage()
 })
