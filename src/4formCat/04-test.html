@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-test</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .image{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 500px;
+            height: 400px;
+        }
+        .image_favorite{
+            width: 200px;
+            height: 200px;
+        }
+        .reload{
+            height: 40px;
+            background-color: aqua;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .favorite{
+            height: 25px;
+            background-color: pink;
+            width: 20%;
+            margin-top: 5px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="container">
+        <h1>FavoritesCat</h1>
+        <span id="error"></span>
+        <section id="init">
+
+        </section>
+        <button id="reload" class="reload">
+            Reload
+        </button>
+    </div>
+    <section>
+        <h2>your favorites</h2>
+        <article id="yourFavorite">
+            
+        </article>
+    </section>
+    <section>
+        <h2>Sube una foto</h2>
+        <form action="" id="formCat">
+            <input type="file" id="file" name="file"/>
+            <button type="button" onclick="uploadCatPicture()">Subir</button>
+        </form>
+    </section>
+    <script src="./04-test.js"></script>
+</body>
+</html>
