@@ -1,6 +1,6 @@
 # Infinity Streaming
 
-## favoritesCat
+## Rama favoritesCat
 
 Es una es una app basica para mobile donde puedes ver, subir y crear una lista de tus datos favoritos.
 
