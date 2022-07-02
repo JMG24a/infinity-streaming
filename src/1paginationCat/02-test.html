@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-test</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .image{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 500px;
+            height: 400px;
+        }
+        .reload{
+            height: 40px;
+            background-color: aqua;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="container">
+        <h1>PaginationCat</h1>
+        <div>
+            <img alt="Imagen gatito" id="im" class="image">
+            <img alt="Imagen gatito" id="im2" class="image">
+            <img alt="Imagen gatito" id="im3" class="image">
+            <img alt="Imagen gatito" id="im4" class="image">
+        </div>
+        <button id="reload" class="reload">
+            Reload
+        </button>
+    </div>
+
+    <script src="./02-test.js"></script>
+</body>
+</html>
