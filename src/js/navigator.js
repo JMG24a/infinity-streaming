@@ -20,11 +20,12 @@ function navigator() {
 
 function home(){
   //header
+  $header.style.background = `white`
   $header.classList.remove('header-container--long')
   $title.classList.remove('inactive')
   $headerArrow.classList.add('inactive')
   $headerSearchTile.classList.add('inactive')
-  $searchForm.classList.add('inactive')
+  $searchForm.classList.remove('inactive')
   //home
   $trendingPreview.classList.remove('inactive')
   $categoriesPreview.classList.remove('inactive')
@@ -41,12 +42,14 @@ function home(){
 
 function search(){
   //header
+  $header.style.background = `white`
   $header.classList.remove('header-container--long')
   $title.classList.add('inactive')
   $headerArrow.classList.remove('inactive')
   $headerArrow.classList.remove('header-arrow--white')
-  $headerSearchTile.classList.remove('inactive')
+  $headerSearchTile.classList.add('inactive')
   $searchForm.classList.remove('inactive')
+  $movieDetail.classList.add('inactive')
   //home
   $trendingPreview.classList.add('inactive')
   $categoriesPreview.classList.add('inactive')
@@ -56,17 +59,23 @@ function search(){
   $movieDetail.classList.add('inactive')
   //generic list
   $genericList.classList.remove('inactive')
+
+  const [_, dataQuery] = window.location.hash.split('=');
+
+  getSearchPreview(dataQuery)
 }
 
 
 function categories(){
   //header
+  $header.style.background = `white`
   $header.classList.remove('header-container--long')
   $title.classList.add('inactive')
   $headerArrow.classList.remove('inactive')
   $headerArrow.classList.remove('header-arrow--white')
   $headerSearchTile.classList.remove('inactive')
   $searchForm.classList.add('inactive')
+  $movieDetail.classList.add('inactive')
   //home
   $trendingPreview.classList.add('inactive')
   $categoriesPreview.classList.add('inactive')
@@ -83,13 +92,33 @@ function categories(){
   const text = document.createTextNode(`${categoryName}`)
   $headerSearchTile.innerText = ''
   $headerSearchTile.appendChild(text)
-  $genericList.innerHTML = ""
 
   getCategoriesPreview(categoryId)
 }
 
 function trends(){
-  console.log('hhhh')
+  //header
+  $header.style.background = `white`
+  $header.classList.remove('header-container--long')
+  $title.classList.add('inactive')
+  $headerArrow.classList.remove('inactive')
+  $headerArrow.classList.remove('header-arrow--white')
+  $headerSearchTile.classList.remove('inactive')
+  $searchForm.classList.add('inactive')
+  $movieDetail.classList.add('inactive')
+  //home
+  $trendingPreview.classList.add('inactive')
+  $categoriesPreview.classList.add('inactive')
+  //search
+  // $headerSearch.classList.add('inactive')
+  //details
+  $movieDetail.classList.add('inactive')
+  //generic list
+  $genericList.classList.remove('inactive')
+
+  $headerSearchTile.innerText = 'Tendendias'
+
+  getTrending()
 }
 
 function movie(){
@@ -104,9 +133,14 @@ function movie(){
   $trendingPreview.classList.add('inactive')
   $categoriesPreview.classList.add('inactive')
   //search
-  $headerSearch.classList.add('inactive')
+  // $headerSearch.classList.add('inactive')
   //details
   $movieDetail.classList.remove('inactive')
   //generic list
-  $genericList.classList.remove('inactive')
+  $genericList.classList.add('inactive')
+
+  const [_, dataQuery] = window.location.hash.split('=');
+  const [categoryId, categoryName] = dataQuery.split('-');
+
+  getDetailPage(categoryId)
 }

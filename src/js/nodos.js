@@ -6,8 +6,8 @@ function $(id){
 const $header = $('header')
 const $headerArrow = $('header-arrow')
 const $headerSearchTile = $('header-search-title')
-const $searchForm = $('searchForm')
-
+const $searchForm = $('search-form')
+const $searchingMovie = $('searching-movie')
 //home trending
 const $title = $('title')
 const $trendingPreview = $('trendingPreview')
@@ -26,3 +26,10 @@ const $movieDetail = $('movie-detail')
 
 //generic list
 const $genericList = $('generic-list')
+
+//detail
+const $detailCategoriesList = $('detail-categories-list')
+const $detailTitle = $('detail-title')
+const $detailScore = $('detail-score')
+const $detailDescription = $('detail-description')
+const $relationMovies = $('relation-movies')
